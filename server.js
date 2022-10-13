@@ -26,8 +26,6 @@ app.use(
   })
 );
 
-app.set("trust proxy", 1);
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
