@@ -18,7 +18,15 @@ connectDB();
 app.use(credentials);
 
 // cross origin resource sharing
-app.use(cors({ corsOptions, credentials: true, origin: true }));
+app.use(
+  cors({
+    corsOptions,
+    credentials: true,
+    origin: "https://f1-app.onrender.com",
+  })
+);
+
+app.set("trust proxy", 1);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
