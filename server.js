@@ -22,13 +22,13 @@ app.use(
   cors({
     corsOptions,
     credentials: true,
-    origin: "https://f1-app.onrender.com",
+    origin: true,
   })
 );
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-app.set("trusy proxy", 1);
+app.set("trust proxy", 1);
 
 // built-in middleware to handle urlencoded data ('content-type : application/x-www-form-urlencoded);
 app.use(express.urlencoded({ extended: false }));
