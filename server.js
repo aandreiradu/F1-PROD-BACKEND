@@ -22,7 +22,7 @@ app.use(
   cors({
     corsOptions,
     credentials: true,
-    origin: "https://f1-app.onrender.com",
+    origin: true,
   })
 );
 
