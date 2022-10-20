@@ -63,6 +63,9 @@ app.use(
 );
 app.use("/api/accounts/edit", require("./routes/api/updateUserInformations"));
 
+// BETs
+app.use("/api/addRaceBet", require("./routes/api/addRaceBet"));
+
 app.all("*", (req, res) => {
   res.status(404);
   if (req.accepts("html")) {
